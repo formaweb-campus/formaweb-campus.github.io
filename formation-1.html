@@ -4,82 +4,333 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formation 1 - FormaWeb Campus</title>
+
+    <title>Formation 1 — FormaWeb Campus</title>
 
     <style>
+
         * {
             box-sizing: border-box;
         }
 
         body {
             margin: 0;
-            background: white;
-            font-family: Georgia, serif;
-            color: black;
+            background: #f7f7f7;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #111;
         }
 
-        .page {
-            min-height: 100vh;
-            width: 100%;
+        header {
+            background: white;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 22px 7%;
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 40px;
+            justify-content: space-between;
         }
 
-        .texte {
-            max-width: 700px;
-            font-size: 28px;
-            line-height: 1.6;
+        .logo {
+            font-family: Georgia, serif;
+            font-size: 25px;
+            font-weight: bold;
         }
 
-        a {
-            color: black;
+        .logo span {
+            font-weight: normal;
+        }
+
+        header a {
+            color: #111;
             text-decoration: none;
-            border: 1px solid black;
-            padding: 10px 20px;
-            font-size: 16px;
+            font-size: 15px;
         }
 
-        a:hover {
-            background: black;
-            color: white;
+        header a:hover {
+            text-decoration: underline;
         }
+
+        .hero {
+            background: white;
+            padding: 85px 20px;
+            text-align: center;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .categorie {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: Georgia, serif;
+            font-size: 52px;
+            font-weight: normal;
+            margin: 0 auto 20px;
+            max-width: 800px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .contenu {
+            max-width: 1050px;
+            margin: 60px auto;
+            padding: 0 25px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 35px;
+        }
+
+        .bloc {
+            background: white;
+            border: 1px solid #e2e2e2;
+            padding: 35px;
+        }
+
+        .bloc h2 {
+            font-family: Georgia, serif;
+            font-weight: normal;
+            font-size: 30px;
+            margin-top: 0;
+        }
+
+        .bloc p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .cours {
+            border-top: 1px solid #e5e5e5;
+            padding: 18px 0;
+        }
+
+        .cours:first-of-type {
+            border-top: none;
+        }
+
+        .cours strong {
+            display: block;
+            margin-bottom: 7px;
+        }
+
+        .cours span {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .prix {
+            font-family: Georgia, serif;
+            font-size: 38px;
+            margin: 10px 0 20px;
+        }
+
+        .infos {
+            color: #666;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .bouton {
+            display: block;
+            background: #111;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            padding: 15px;
+            margin-top: 25px;
+        }
+
+        .bouton:hover {
+            background: #333;
+        }
+
+        .retour {
+            text-align: center;
+            margin: 50px 20px;
+        }
+
+        .retour a {
+            color: #111;
+            text-decoration: none;
+        }
+
+        .retour a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            color: #777;
+            font-size: 13px;
+        }
+
+        @media (max-width: 800px) {
+
+            .contenu {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+        }
+
     </style>
 </head>
 
 <body>
 
-    <div class="page">
 
-        <div class="texte">
+    <header>
 
-            Formation 1
-
-            <br><br>
-
-            Présentation de la formation.
-
-            <br><br>
-
-            Programme :
-            <br>
-            Cours 1
-            <br>
-            Cours 2
-            <br>
-            Cours 3
-
-            <br><br>
-
-            <a href="index.html">
-                ← Retour à l'accueil
-            </a>
-
+        <div class="logo">
+            FormaWeb <span>Campus</span>
         </div>
 
+        <a href="formations.html">
+            ← Formations
+        </a>
+
+    </header>
+
+
+    <section class="hero">
+
+        <div class="categorie">
+            Formation en ligne
+        </div>
+
+        <h1>
+            Formation 1
+        </h1>
+
+        <p>
+            Une formation complète pour découvrir les différentes
+            notions présentées dans ce programme.
+        </p>
+
+    </section>
+
+
+    <main class="contenu">
+
+
+        <section class="bloc">
+
+            <h2>
+                À propos de cette formation
+            </h2>
+
+            <p>
+                Bienvenue dans cette formation FormaWeb Campus.
+                Vous allez progresser progressivement à travers
+                plusieurs cours.
+            </p>
+
+            <p>
+                Chaque cours présente une nouvelle étape et vous
+                permet d'avancer dans votre apprentissage.
+            </p>
+
+
+            <h2>
+                Programme
+            </h2>
+
+
+            <div class="cours">
+
+                <strong>
+                    Cours 1 — Introduction
+                </strong>
+
+                <span>
+                    Découvrez les bases.
+                </span>
+
+            </div>
+
+
+            <div class="cours">
+
+                <strong>
+                    Cours 2 — Approfondissement
+                </strong>
+
+                <span>
+                    Allez plus loin dans votre apprentissage.
+                </span>
+
+            </div>
+
+
+            <div class="cours">
+
+                <strong>
+                    Cours 3 — Mise en pratique
+                </strong>
+
+                <span>
+                    Mettez vos connaissances en pratique.
+                </span>
+
+            </div>
+
+
+        </section>
+
+
+        <aside class="bloc">
+
+            <div class="categorie">
+                Accès à la formation
+            </div>
+
+            <div class="prix">
+                49 €
+            </div>
+
+            <div class="infos">
+
+                Accès en ligne<br>
+                Plusieurs cours<br>
+                Progression à votre rythme
+
+            </div>
+
+            <a class="bouton" href="https://buy.stripe.com/test_5kQaEWdGE2Ql9X47O53Nm01">
+                Accéder à la formation
+            </a>
+
+        </aside>
+
+
+    </main>
+
+
+    <div class="retour">
+
+        <a href="formations.html">
+            ← Retour aux formations
+        </a>
+
     </div>
+
+
+    <footer>
+        © 2026 FormaWeb Campus
+    </footer>
+
 
 </body>
 

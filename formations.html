@@ -4,74 +4,256 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formations - FormaWeb Campus</title>
+
+    <title>Formations — FormaWeb Campus</title>
 
     <style>
+
         * {
             box-sizing: border-box;
         }
 
         body {
             margin: 0;
-            background: white;
-            font-family: Georgia, serif;
-            color: black;
+            background: #f7f7f7;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #111;
         }
 
-        .page {
-            height: 100vh;
-            width: 100%;
+        header {
+            background: white;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 22px 7%;
             display: flex;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 40px;
+            justify-content: space-between;
         }
 
-        .texte {
-            max-width: 700px;
-            font-size: 28px;
-            line-height: 1.6;
+        .logo {
+            font-family: Georgia, serif;
+            font-size: 25px;
+            font-weight: bold;
         }
 
-        a {
-            color: black;
+        .logo span {
+            font-weight: normal;
+        }
+
+        .retour {
+            color: #111;
             text-decoration: none;
-            border: 1px solid black;
-            padding: 10px 20px;
-            font-size: 16px;
+            font-size: 15px;
         }
 
-        a:hover {
-            background: black;
-            color: white;
+        .retour:hover {
+            text-decoration: underline;
         }
+
+        .hero {
+            background: white;
+            padding: 80px 20px 70px;
+            text-align: center;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .hero h1 {
+            font-family: Georgia, serif;
+            font-size: 48px;
+            font-weight: normal;
+            margin: 0 0 20px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .formations {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 25px;
+        }
+
+        .formation-card {
+            background: white;
+            border: 1px solid #e2e2e2;
+            padding: 35px;
+            margin-bottom: 25px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .formation-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+        }
+
+        .categorie {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        .formation-card h2 {
+            font-family: Georgia, serif;
+            font-size: 30px;
+            font-weight: normal;
+            margin: 0 0 15px;
+        }
+
+        .formation-card p {
+            color: #555;
+            line-height: 1.7;
+            max-width: 700px;
+        }
+
+        .details {
+            display: flex;
+            gap: 30px;
+            margin: 25px 0;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .bouton {
+            display: inline-block;
+            background: #111;
+            color: white;
+            text-decoration: none;
+            padding: 13px 22px;
+            font-size: 15px;
+        }
+
+        .bouton:hover {
+            background: #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            color: #777;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .details {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .formation-card {
+                padding: 25px;
+            }
+        }
+
     </style>
 </head>
 
 <body>
 
-    <div class="page">
+    <header>
 
-        <div class="texte">
+        <div class="logo">
+            FormaWeb <span>Campus</span>
+        </div>
 
-            Nos formations
+        <a class="retour" href="index.html">
+            Accueil
+        </a>
 
-            <br><br>
+    </header>
 
-            <a href="formation-1.html">
+
+    <section class="hero">
+
+        <h1>Nos formations</h1>
+
+        <p>
+            Découvrez les formations proposées par FormaWeb Campus
+            et développez de nouvelles compétences à votre rythme.
+        </p>
+
+    </section>
+
+
+    <main class="formations">
+
+        <div class="formation-card">
+
+            <div class="categorie">
+                Formation en ligne
+            </div>
+
+            <h2>
                 Formation 1
-            </a>
+            </h2>
 
-            <br><br>
+            <p>
+                Une formation complète composée de plusieurs cours
+                et conçue pour progresser étape par étape.
+            </p>
 
-            <a href="index.html">
-                ← Retour
+            <div class="details">
+
+                <span>● Plusieurs cours</span>
+
+                <span>● Accessible en ligne</span>
+
+                <span>● Progression libre</span>
+
+            </div>
+
+            <a class="bouton" href="formation-1.html">
+                Découvrir la formation
             </a>
 
         </div>
 
-    </div>
+
+        <!--
+        POUR AJOUTER UNE AUTRE FORMATION PLUS TARD :
+
+        <div class="formation-card">
+
+            <div class="categorie">
+                Formation en ligne
+            </div>
+
+            <h2>
+                Formation 2
+            </h2>
+
+            <p>
+                Description de la formation.
+            </p>
+
+            <div class="details">
+                <span>● Plusieurs cours</span>
+                <span>● Accessible en ligne</span>
+            </div>
+
+            <a class="bouton" href="formation-2.html">
+                Découvrir la formation
+            </a>
+
+        </div>
+        -->
+
+    </main>
+
+
+    <footer>
+        © 2026 FormaWeb Campus
+    </footer>
 
 </body>
 

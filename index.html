@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FormaWeb Campus</title>
+    <title>Mon site</title>
 
     <style>
         * {
@@ -19,13 +18,17 @@
         }
 
         .page {
+            display: none;
             height: 100vh;
             width: 100%;
-            display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             padding: 40px;
+        }
+
+        .page.active {
+            display: flex;
         }
 
         .texte {
@@ -34,15 +37,25 @@
             line-height: 1.6;
         }
 
-        a {
-            color: black;
-            text-decoration: none;
+        .navigation {
+            position: fixed;
+            bottom: 30px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        button {
+            background: white;
             border: 1px solid black;
             padding: 10px 20px;
             font-size: 16px;
+            cursor: pointer;
         }
 
-        a:hover {
+        button:hover {
             background: black;
             color: white;
         }
@@ -51,20 +64,201 @@
 
 <body>
 
-    <div class="page">
+    <!-- PAGE 1 -->
+    <div class="page active">
         <div class="texte">
-
-            Bienvenue sur FormaWeb Campus.
-
-            <br><br>
-
-            <a href="formations.html">
-                Découvrir les formations
-            </a>
-
+            Bienvenue.
         </div>
     </div>
 
-</body>
+    <!-- PAGE 2 -->
+    <div class="page">
+        <div class="texte">
+            Voilà votre formation.
+        </div>
+    </div>
 
+    <!-- PAGE 3 -->
+    <div class="page">
+        <div class="texte">
+            Dans ce monde, la seule façon de gagner de l'argent est de travailler dur pour gagner sa vie honnêtement.
+        </div>
+    </div>
+
+ <!-- PAGE 4 -->
+    <div class="page">
+        <div class="texte">
+            Sauf pour le plus malin d'entre les malins.
+        </div>
+    </div>
+
+
+<!-- PAGE 5 -->
+    <div class="page">
+        <div class="texte">
+            Ayez toujours quelques coups d'avance sur les autres.
+        </div>
+    </div>
+
+<!-- PAGE 6 -->
+    <div class="page">
+        <div class="texte">
+            Profitez des profiteurs, dépouillez les voleurs et trompez les escrocs.
+        </div>
+    </div>
+
+<!-- PAGE 7 -->
+    <div class="page">
+        <div class="texte">
+            Et enfin, n'accordez jamais votre confiance à un inconnu.
+        </div>
+    </div>
+
+<!-- PAGE 8 -->
+    <div class="page">
+        <div class="texte">
+            Voilà votre formation, pour avoir tenté d'escroquer votre prochain.
+        </div>
+    </div>
+
+<!-- PAGE 9 -->
+    <div class="page">
+        <div class="texte">
+            Comme je l'ai dit : seul le plus malin d'entre les malins gagne sa vie autrement qu'en travaillant dur.
+        </div>
+    </div>
+
+<!-- PAGE 10 -->
+    <div class="page">
+        <div class="texte">
+            <i>Profitez des profiteurs, dépouillez les voleurs et trompez les escrocs.</i>
+        </div>
+    </div>
+
+<!-- PAGE 11 -->
+    <div class="page">
+        <div class="texte">
+            Au revoir.
+        </div>
+    </div>
+
+
+<!-- PAGE SUIVANTES -->
+    <div class="page">
+        <div class="texte">
+            ...
+        </div>
+    </div>
+
+<!-- PAGE SUIVANTES -->
+    <div class="page">
+        <div class="texte">
+            ...
+        </div>
+    </div>
+
+<!-- PAGE SUIVANTES -->
+    <div class="page">
+        <div class="texte">
+            ...
+        </div>
+    </div>
+
+<!-- PAGE SUIVANTES -->
+    <div class="page">
+        <div class="texte">
+            ...
+        </div>
+    </div>
+
+<!-- PAGE SUIVANTES -->
+    <div class="page">
+        <div class="texte">
+            ...
+        </div>
+    </div>
+
+<!-- PAGE SUIVANTES -->
+    <div class="page">
+        <div class="texte">
+            ...
+        </div>
+    </div>
+
+
+<!-- PAGE SUIVANTES -->
+    <div class="page">
+        <div class="texte">
+            ...
+        </div>
+    </div>
+
+<!-- PAGE SUIVANTES -->
+    <div class="page">
+        <div class="texte">
+            ...
+        </div>
+    </div>
+
+<!-- PAGE SUIVANTES -->
+    <div class="page">
+        <div class="texte">
+            ...
+        </div>
+    </div>
+
+
+<!-- PAGE SUIVANTES -->
+    <div class="page">
+        <div class="texte">
+            ...
+        </div>
+    </div>
+
+<!-- PAGE SUIVANTES -->
+    <div class="page">
+        <div class="texte">
+            ...
+        </div>
+    </div>
+
+<!-- PAGE SUIVANTES -->
+    <div class="page">
+        <div class="texte">
+            ...
+        </div>
+    </div>
+
+
+    <!-- NAVIGATION -->
+    <div class="navigation">
+        <button onclick="pagePrecedente()">←</button>
+        <button onclick="pageSuivante()">→</button>
+    </div>
+
+    <script>
+        let pageActuelle = 0;
+        const pages = document.querySelectorAll(".page");
+
+        function afficherPage(numero) {
+            pages.forEach(page => page.classList.remove("active"));
+            pages[numero].classList.add("active");
+        }
+
+        function pageSuivante() {
+            if (pageActuelle < pages.length - 1) {
+                pageActuelle++;
+                afficherPage(pageActuelle);
+            }
+        }
+
+        function pagePrecedente() {
+            if (pageActuelle > 0) {
+                pageActuelle--;
+                afficherPage(pageActuelle);
+            }
+        }
+    </script>
+
+</body>
 </html>
